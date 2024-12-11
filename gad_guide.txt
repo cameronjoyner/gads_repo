@@ -1,0 +1,71 @@
+# How to Convert HTML to Plain Text Using OpenAI
+
+This guide will help you turn HTML files into plain text using a tool called OpenAI. 
+The process involves reading HTML files from a folder, sending the content to OpenAI, and saving the plain text in another folder.
+
+## What You Need
+
+- A computer with Python installed (version 3.7 or higher)
+- A tool called pip to install packages
+
+## Setting Up Your Environment
+
+1. **Open your command line tool.** This could be Command Prompt, PowerShell, or Terminal.
+2. **Go to your project folder.** For example:
+   ```
+   cd /path/to/your/project
+   ```
+3. **Create a new environment.** You can call it `venv` or any name you like:
+   ```
+   python -m venv venv
+   ```
+4. **Turn on the environment:**
+   - On Windows:
+     ```
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```
+     source venv/bin/activate
+     ```
+
+## Installing Necessary Tools
+
+Once your environment is active, install the required tools by typing:
+
+```
+pip install openai
+```
+
+## Getting Your OpenAI API Key
+
+1. **Sign up or log in** to your OpenAI account at [OpenAI](https://www.openai.com/).
+2. **Go to the API section** of your account.
+3. **Create a new API key** and copy it.
+4. **Replace the placeholder in the script** with your actual API key:
+   ```python
+   openai.api_key = "YOUR_API_KEY"
+   ```
+
+## How to Run the Program
+
+1. **Make sure your HTML files** are in the `HTML_DOCS` folder inside your project.
+2. **Run the script** by typing:
+   ```
+   python professor_gad_weiss.py
+   ```
+
+## What to Expect
+
+- The program will look at each HTML file in the `HTML_DOCS` folder.
+- It will save the plain text version in the `LLM_OUTPUT` folder with the same name as the original HTML file but ending in `.txt`.
+- You will see messages in the console showing the progress, including which file is being processed and where the output is saved.
+
+### Example
+
+If you have a file named `ir_1.html`, the program will create a file called `ir_1.txt` in the `LLM_OUTPUT` folder, containing the plain text from the HTML.
+
+## Important Notes
+
+- Keep your API key safe and do not share it publicly.
+- Using the OpenAI API may cost money, so keep an eye on your usage.
